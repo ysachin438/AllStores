@@ -87,7 +87,8 @@ class UserModel extends CI_Model
         return $this->db->count_all('users') ?? NULL;
     }
     public function countNewUsers($date){
-        $this->db->where('created_at >', $date);
-        return $this->db->count_all('users') ?? NULL;
+        $this->db->where('created_at >=', $date);
+        $res= $this->db->get('users');
+        return $res->num_rows();
     }
 }

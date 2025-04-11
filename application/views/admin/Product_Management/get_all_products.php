@@ -10,7 +10,7 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr align="middle">
-                            <th style="width: 10px">UID</th>
+                            <th style="width: 10px">ID</th>
                             <th>Name</th>
                             <th>Price</th>
                             <th style="width: 40px">Quantity</th>

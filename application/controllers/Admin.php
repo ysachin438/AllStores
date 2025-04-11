@@ -13,8 +13,8 @@ class Admin extends CI_Controller
 
             $data['view'] = 'admin/dashboard';
             $data['title'] = 'Admin Dashboard';
-            $today_date = date('Y-m-d 0:0:0');
-
+            $today_date = date('Y-m-d 00:00:00');
+            
             $data['total_users'] = $this->UserModel->countTotalUsers();
             $data['new_users'] = $this->UserModel->countNewUsers($today_date);
 

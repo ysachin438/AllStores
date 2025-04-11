@@ -42,7 +42,7 @@ class ProductModel extends CI_Model
         return $this->db->count_all('products') ?? NULL;
     }
     public function countNewItems($date){
-        $this->db->where('created_at >', $date);
-        return $this->db->count_all('products') ?? NULL;
+        $this->db->where('created_at >=', $date);
+        return $this->db->get('products')->num_rows() ?? NULL;
     }
 }
